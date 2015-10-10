@@ -265,6 +265,7 @@ public class ActiveNotifier implements FineGrainedNotifier {
             message.append(this.escape(string.toString()));
             return this;
         }
+        
 
         private MessageBuilder startMessage() {
             message.append(this.escape(build.getProject().getFullDisplayName()));
