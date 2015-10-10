@@ -170,6 +170,7 @@ public class ActiveNotifier implements FineGrainedNotifier {
         Set<String> commits = new HashSet<String>();
         for (Entry entry : entries) {
             StringBuffer commit = new StringBuffer();
+            commit.append(entry.getParent().build.getProject().getDisplayNameOrNull());
             commit.append(entry.getCommitId()).append(": ");
             commit.append(entry.getMsg());
             commit.append(" [").append(entry.getAuthor().getDisplayName()).append("]");
